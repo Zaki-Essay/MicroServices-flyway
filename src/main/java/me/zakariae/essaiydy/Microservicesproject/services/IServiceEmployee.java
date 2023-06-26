@@ -7,6 +7,8 @@ import me.zakariae.essaiydy.Microservicesproject.entity.Employee;
 import me.zakariae.essaiydy.Microservicesproject.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 public interface IServiceEmployee {
 
@@ -22,6 +24,5 @@ public interface IServiceEmployee {
     public Employee getEmployeeById(Long id);
 
 
-
-
+    List<Employee> getEmployees();
 }

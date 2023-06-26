@@ -8,6 +8,8 @@ import me.zakariae.essaiydy.Microservicesproject.services.IServiceEmployee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class ServiceEmployeeImpl implements IServiceEmployee {
@@ -38,4 +40,8 @@ public class ServiceEmployeeImpl implements IServiceEmployee {
     }
 
 
+    @Override
+    public List<Employee> getEmployees() {
+        return employeeRepository.findAll();
+    }
 }
